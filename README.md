@@ -2,7 +2,7 @@
 
 this Deep Research implementation is based on the n8n workflow [host-your-own-ai-deep-research-agent-with-n8n-apify-and-openai-o3](https://n8n.io/workflows/2878-host-your-own-ai-deep-research-agent-with-n8n-apify-and-openai-o3/)
 
-see [instructions](instructions/1.md) for more details.
+see [instructions](instructions/01.md) for more details.
 
 ## Installation
 
