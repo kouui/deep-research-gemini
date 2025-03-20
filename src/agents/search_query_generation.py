@@ -30,7 +30,7 @@ class SearchQueryGenerationAgent(AgentBase):
         }
         return message
 
-    def send_message(self, query:str, breadth:int, learnings:list[str], language:str):
+    def send_message(self, query:str, breadth:int, learnings:list[str], languages:list[str]):
         system = self.system_prompt()
         learned = "" if not learnings else ( 
             f"Here are some learnings from previous research, "
@@ -43,7 +43,7 @@ class SearchQueryGenerationAgent(AgentBase):
             "content": (
                 "Given the following prompt from the user, generate a list of SERP queries to research the topic.\n"
                 "Reduce the number of words in each query to its keywords only.\n"
-                f"search query should be generated in language : {' and '.join([v.strip() for v in language.split(',')])}\n"
+                f"search query should be generated in language : {' and '.join([v.strip() for v in languages])}\n"
                 f"Return a maximum of {breadth} queries, but feel free to return less "
                 "if the original prompt is clear. Make sure each query is unique and not similar to each other:\n"
                 f"<prompt>{query}</prompt>\n\n"

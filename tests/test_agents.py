@@ -12,7 +12,7 @@ def _test():
     depth = 1
     breadth = 2
     language = "Chinese"
-    search_query_language = "Chinese,Japanese"
+    search_query_language = ["Chinese","Japanese"]
     # style = "informative"
 
     print(f"[query]\n{query}\n[depth]\n{depth}\n[breadth]\n{breadth}\n[language]\n{language}\n\n")
